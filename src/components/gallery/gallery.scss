@@ -1,0 +1,110 @@
+@import '../../customize.scss';
+
+.gallery-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    box-sizing: border-box;
+
+}
+
+
+.card-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: baseline;
+    width: 25vw;
+    height: 20vw;
+    margin: 5px;
+    box-sizing: border-box;
+    @include phone{
+        width: 80vw;
+        height: 50vw;
+    }
+    list-style: none;
+    padding: 0px;
+    transition: scale .5s;
+    .comment{
+        //display:block;
+        min-width: 0;
+        width: 100%;
+        color: $yellow;
+        background-color: $blue;
+        box-shadow: 0px 0px 7px 4px #FFE70C;
+        border-radius: 7px;
+        padding: 3px;
+        margin-top: 5px;
+        outline: none;
+        border: none;
+        text-align: center;
+        align-self: center;
+    }
+    &:hover{
+        scale: 1.1;
+    }
+}
+  
+ 
+
+
+
+.img-wrapper{
+    position: relative;
+    display:flex;
+    //flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //width: 100%;
+    background-color: white;
+    height: 25vh;
+    padding: 20px;
+    border: solid rgb(75, 43, 28) 5px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: width .5s;
+    img{
+        position: absolute;
+        width: 80%;
+    }
+    
+} 
+  
+
+
+
+  
+.big{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    //transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.945);
+    border: none;
+
+    img{
+        position: absolute;
+        width: 65%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: -8px 6px 6px rgba(0, 0, 0, 0.25);
+    }
+
+}
+
+
+
+
+
+
