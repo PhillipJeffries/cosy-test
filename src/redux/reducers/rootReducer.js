@@ -5,6 +5,7 @@ import {sliderReducer} from './sliderReducer';
 
 
 
+
 export const rootReducer = combineReducers({
     galleryReducer,
     sliderReducer

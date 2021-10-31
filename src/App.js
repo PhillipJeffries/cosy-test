@@ -9,6 +9,8 @@ import Gallery from './components/gallery/gallery';
 
 import Slider from './components/slider/slider';
 
+import AddPhotoForm from './components/addPhotoForm/addPhotoForm';
+
 console.log(document.location.href)
 
 
@@ -16,6 +18,7 @@ console.log(document.location.href)
 function App() {
   return (
     <div className='App'>
+      <AddPhotoForm/>
       <Gallery/>
       <Slider/>
     </div>

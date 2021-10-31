@@ -12,6 +12,21 @@ export const galleryReducer = (state=initialState, action) => {
             return{
                 ...state
             }
+        case 'ADD_PHOTO':
+            console.log('addPhoto', picturesData);
+            const url = !action.url ? '' : action.url;
+            const comment = !action.comment ? '' : action.comment;
+            const newLocalState = [
+                {
+                    url: action.url,
+                    comment: action.comment
+                }
+            ]
+            return{
+                ...state,
+                picturesData: [...state.picturesData, ...newLocalState]
+
+            }
         default:
             return state
     }
