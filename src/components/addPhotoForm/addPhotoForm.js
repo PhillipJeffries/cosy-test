@@ -34,11 +34,11 @@ const AddPhotoForm = () => {
 
     return(
         <form onSubmit={handleSubmit} className="add-photo-form">
-            <div>
+            <div className="input-wrapper">
                 <input type="text" placeholder="enter url" value={url} onChange={changeUrl}/>
                 <input type="text" placeholder="enter comment" value={comment} onChange={changeComment}/>
-                <input type="submit" value="enter"/>
             </div>
+                <input type="submit" value="enter"/>
             <h4>press enter to add a new photo</h4>
         </form>
     )

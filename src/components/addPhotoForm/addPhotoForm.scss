@@ -5,6 +5,12 @@
     align-items: center;
 
     margin: 20px;
+    & .input-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
     & input{
         border: solid 3px yellow;
         border-radius: 8px;
