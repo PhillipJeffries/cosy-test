@@ -26,18 +26,20 @@ const AddPhotoForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type: 'ADD_PHOTO', url: url, comment: comment, id: uniqid()});
+        setUrl('');
+        setComment('');
 
     }
 
 
     return(
         <form onSubmit={handleSubmit} className="add-photo-form">
-            <h4>press enter to add a new photo</h4>
             <div>
-                <input type="text" placeholder="enter url" onChange={changeUrl}/>
-                <input type="text" placeholder="enter comment" onChange={changeComment}/>
+                <input type="text" placeholder="enter url" value={url} onChange={changeUrl}/>
+                <input type="text" placeholder="enter comment" value={comment} onChange={changeComment}/>
                 <input type="submit" hidden/>
             </div>
+            <h4>press enter to add a new photo</h4>
         </form>
     )
 };

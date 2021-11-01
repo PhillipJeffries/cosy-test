@@ -29,7 +29,8 @@
     }
     list-style: none;
     padding: 0px;
-    transition: scale .5s;
+    transition: transform .5s;
+        
         .comment-form{
             .comment{
                 //display:block;
@@ -50,8 +51,13 @@
         }
     
     &:hover{
-        scale: 1.1;
+        transform: scale(1.05);
+        .img-wrapper{
+
+            box-shadow: -8px 6px 6px rgba(0, 0, 0, 0.25);
+        }
     }
+    
 }
   
  
@@ -72,11 +78,27 @@
     border-radius: 3px;
     box-sizing: border-box;
     overflow: hidden;
-    transition: width .5s;
-    img{
-        position: absolute;
-        width: 80%;
-    }
+    transition: width .5s, box-shadow .5s;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.25);
+        img{
+            position: absolute;
+            height: 80%;
+        }
+        .close-button{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            //z-index: 2;
+            transition: transform .5s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                &:active{
+                    transform: scale(.9);
+                    transition: 0s;
+                }
+            
+        }
     
 } 
   

@@ -37,6 +37,28 @@ export const galleryReducer = (state=initialState, action) => {
                 picturesData: [...state.picturesData, ...newLocalState]
 
             }
+        case 'DELETE_PHOTO':
+            return(()=>{
+                console.log('deletePhoto')
+                const id = action.id;
+                console.log('id', id)
+                const {picturesData} = state;
+                const itemIndex = picturesData.findIndex(res => res.id === id);
+                console.log('itemIndex', itemIndex);
+                const newPicturesData = [
+                    ...picturesData.slice(0, itemIndex),
+                    ...picturesData.slice(itemIndex+1)
+                ];
+
+
+                return{
+                    ...state,
+                    picturesData: newPicturesData
+                }
+
+            })();
+
+            
         default:
             return state
     }

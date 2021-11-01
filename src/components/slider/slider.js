@@ -90,7 +90,7 @@ const Slider = ({i}) => {
                                 key={index+1}
                                 className={slideIndex === index+1 ? "slider-breadcrumbs-list-item slider-breadcrumbs-list-item_active" : "slider-breadcrumbs-list-item"}
                                 onClick={()=>moveDot(index+1)}>
-                                <img src={`${process.env.PUBLIC_URL}${slide.url}`}/>
+                                <img src={slide.url}/>
                             </li>
                                 
                             )
@@ -101,7 +101,7 @@ const Slider = ({i}) => {
                     galleryState.map((slide, index) => {
                         return(
                             <div key={index+1} className={slideIndex === index+1 ? "slide" : "hidden-slide"}>
-                                <img  src={`${process.env.PUBLIC_URL}${galleryState[index].url}`}/>
+                                <img  src={galleryState[index].url}/>
                                 <div className="slide-comment">{slide.comment}</div>
                             </div>
                         )
