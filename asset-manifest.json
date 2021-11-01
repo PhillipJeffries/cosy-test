@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/cosy-test/static/css/main.73260ae0.chunk.css",
-    "main.js": "/cosy-test/static/js/main.c58fe6db.chunk.js",
-    "main.js.map": "/cosy-test/static/js/main.c58fe6db.chunk.js.map",
+    "main.css": "/cosy-test/static/css/main.3238d927.chunk.css",
+    "main.js": "/cosy-test/static/js/main.2fd6954d.chunk.js",
+    "main.js.map": "/cosy-test/static/js/main.2fd6954d.chunk.js.map",
     "runtime-main.js": "/cosy-test/static/js/runtime-main.bacfedb2.js",
     "runtime-main.js.map": "/cosy-test/static/js/runtime-main.bacfedb2.js.map",
     "static/js/2.e6bb1941.chunk.js": "/cosy-test/static/js/2.e6bb1941.chunk.js",
     "static/js/2.e6bb1941.chunk.js.map": "/cosy-test/static/js/2.e6bb1941.chunk.js.map",
     "index.html": "/cosy-test/index.html",
-    "static/css/main.73260ae0.chunk.css.map": "/cosy-test/static/css/main.73260ae0.chunk.css.map",
+    "static/css/main.3238d927.chunk.css.map": "/cosy-test/static/css/main.3238d927.chunk.css.map",
     "static/js/2.e6bb1941.chunk.js.LICENSE.txt": "/cosy-test/static/js/2.e6bb1941.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bacfedb2.js",
     "static/js/2.e6bb1941.chunk.js",
-    "static/css/main.73260ae0.chunk.css",
-    "static/js/main.c58fe6db.chunk.js"
+    "static/css/main.3238d927.chunk.css",
+    "static/js/main.2fd6954d.chunk.js"
   ]
 }
