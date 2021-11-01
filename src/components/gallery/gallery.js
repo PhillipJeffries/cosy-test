@@ -49,7 +49,7 @@ const Gallery = () => {
                     return(
                         <li className="card-wrapper">
                             <div className='img-wrapper'>
-                                <img id={i} onClick={showPic} alt={el.comment} src={`${process.env.PUBLIC_URL}${el.url}`}/>
+                                <img id={i} onClick={showPic} alt={el.comment} src={el.url}/>
                             </div>
                             
                             <input  value={el.comment} className="comment" onClick={(e)=>console.log(e.target)}/>
