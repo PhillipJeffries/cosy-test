@@ -1,36 +1,27 @@
 import './addPhotoForm.scss';
-
 import {useDispatch} from 'react-redux';
-
 import {useState} from 'react';
-
 import uniqid from 'uniqid';
 
+
 const AddPhotoForm = () => {
-
     const dispatch = useDispatch();
-
     const [url, setUrl] = useState('');
     const [comment, setComment] = useState('');
-
     const changeUrl = (e) =>{
         setUrl(e.target.value)
     };
 
     const changeComment = (e) =>{
         setComment(e.target.value)
-    }
-
-    
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type: 'ADD_PHOTO', url: url, comment: comment, id: uniqid()});
         setUrl('');
         setComment('');
-
-    }
-
+    };
 
     return(
         <form onSubmit={handleSubmit} className="add-photo-form">
@@ -46,3 +37,11 @@ const AddPhotoForm = () => {
 
 
 export default AddPhotoForm;
+
+
+
+
+
+
+
+

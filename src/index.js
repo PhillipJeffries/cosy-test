@@ -5,7 +5,6 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import {rootReducer} from './redux/reducers/rootReducer';
 
-
 import './index.scss';
 import App from './App';
 
@@ -17,5 +16,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
 
 

@@ -1,5 +1,6 @@
 import {picturesData} from '../../picturesData';
 
+
 const initialState = {
     picturesData
 }

@@ -1,4 +1,3 @@
-//@import '../../../constants/media_mixin.scss';
 @import "../../customize.scss";
 
 .slider-wrapper{
@@ -11,7 +10,6 @@
 }
 
 .slider{
-    //display: flex;
     margin: 5vh auto;
     justify-content: center;
     position: relative;

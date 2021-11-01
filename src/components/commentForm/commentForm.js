@@ -1,21 +1,17 @@
 import {useState, useEffect} from 'react';
-
 import { useDispatch } from 'react-redux';
 
 
 const CommentForm = ({data}) => {
-
     const [commentText, setCommentText] = useState('');
     const {comment} = data;
     const dispatch = useDispatch();
-    
     
     const handleUpdate = (e) =>{
         e.preventDefault();
         dispatch({type:'EDIT_COMMENT', comment: commentText, id: data.id})
     }
-
-
+    
     useEffect(()=>{
         if(comment){
             setCommentText(comment)
@@ -32,6 +28,10 @@ const CommentForm = ({data}) => {
             <input type="submit" hidden/>
         </form>
     )
-}
+};
+
+
 
 export default CommentForm;
+
+
