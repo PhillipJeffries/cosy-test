@@ -8,7 +8,7 @@ const initialState = {
 export const sliderReducer = (state=initialState, action) => {
     switch (action.type) {
         case 'SHOW_SLIDER':
-            console.log('showslider')
+           
             
             return{
                 ...state,

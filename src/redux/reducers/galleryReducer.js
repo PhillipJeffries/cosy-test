@@ -7,11 +7,11 @@ const initialState = {
 export const galleryReducer = (state=initialState, action) => {
     switch (action.type) {
         case 'EDIT_COMMENT':
-            console.log('editComment')
+         
             const {comment, id} = action;
             const {picturesData} = state;
             const itemIndex = picturesData.findIndex(res => res.id === id);
-            console.log(comment, id)
+            
 
             return{
                 ...state,
@@ -22,9 +22,8 @@ export const galleryReducer = (state=initialState, action) => {
                 ]
             }
         case 'ADD_PHOTO':
-            console.log('addPhoto', picturesData);
-            // const url = !action.url ? '' : action.url;
-            // const comment = !action.comment ? '' : action.comment;
+            
+            
             const newLocalState = [
                 {
                     id: action.id,
@@ -41,10 +40,10 @@ export const galleryReducer = (state=initialState, action) => {
             return(()=>{
                 console.log('deletePhoto')
                 const id = action.id;
-                console.log('id', id)
+               
                 const {picturesData} = state;
                 const itemIndex = picturesData.findIndex(res => res.id === id);
-                console.log('itemIndex', itemIndex);
+           
                 const newPicturesData = [
                     ...picturesData.slice(0, itemIndex),
                     ...picturesData.slice(itemIndex+1)

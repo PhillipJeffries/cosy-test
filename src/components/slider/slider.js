@@ -17,7 +17,7 @@ const Slider = ({i}) => {
     const dispatch = useDispatch();
 
     const sliderOpenState = useSelector(state => {
-        console.log(state.sliderReducer);
+    
         const sliderOpenData = state.sliderReducer;
         return sliderOpenData
     })
@@ -31,7 +31,7 @@ const Slider = ({i}) => {
       }, [index]);
 
     const galleryState = useSelector(state => {
-        console.log(state)
+      
         const picturesData = state.galleryReducer.picturesData;
         return picturesData
     });
@@ -87,10 +87,10 @@ const Slider = ({i}) => {
                         galleryState.map((slide, index) => {
                             return(
                             <li 
-                                key={index+1}
+                                key={slide.id}
                                 className={slideIndex === index+1 ? "slider-breadcrumbs-list-item slider-breadcrumbs-list-item_active" : "slider-breadcrumbs-list-item"}
                                 onClick={()=>moveDot(index+1)}>
-                                <img src={slide.url}/>
+                                <img alt={slide.comment} src={slide.url}/>
                             </li>
                                 
                             )
@@ -100,8 +100,8 @@ const Slider = ({i}) => {
                 {
                     galleryState.map((slide, index) => {
                         return(
-                            <div key={index+1} className={slideIndex === index+1 ? "slide" : "hidden-slide"}>
-                                <img  src={galleryState[index].url}/>
+                            <div key={slide.id} className={slideIndex === index+1 ? "slide" : "hidden-slide"}>
+                                <img alt={slide.comment}  src={galleryState[index].url}/>
                                 <div className="slide-comment">{slide.comment}</div>
                             </div>
                         )

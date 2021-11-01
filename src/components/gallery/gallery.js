@@ -7,7 +7,6 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {useEffect, useState} from 'react';
 
-import uniqid from 'uniqid';
 
 
 
@@ -21,7 +20,6 @@ const Gallery = () => {
     const galleryState = useSelector(state => {
         
         const Data = state.galleryReducer.picturesData;
-        //localStorage.setItem('state', JSON.stringify(Data));
         
         return Data
     });
@@ -74,9 +72,9 @@ const Gallery = () => {
             {
                 state.map((el,i)=>{
                     return(
-                        <li className="card-wrapper">
+                        <li key={el.id} className="card-wrapper">
                             <div className='img-wrapper'>
-                                <img id={el.i} onClick={showPic} alt={el.comment} src={el.url}/>
+                                <img id={i} onClick={showPic} alt={el.comment} src={el.url}/>
                                 <CloseButton id={el.id} onClick={deletePhoto} classname="close-button"/>
                             </div>
                             <CommentForm data={el}/>
