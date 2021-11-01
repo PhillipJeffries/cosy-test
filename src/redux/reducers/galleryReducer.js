@@ -11,15 +11,15 @@ export const galleryReducer = (state=initialState, action) => {
             const {comment, id} = action;
             const {picturesData} = state;
             const itemIndex = picturesData.findIndex(res => res.id === id);
-            
+            const newPicturesData = [
+                ...picturesData.slice(0, itemIndex),
+                {url: picturesData[itemIndex].url, comment: comment, id: id},
+                ...picturesData.slice(itemIndex+1)
+            ]
 
             return{
                 ...state,
-                picturesData: [
-                    ...picturesData.slice(0, itemIndex),
-                    {url: picturesData[itemIndex].url, comment: comment, id: id},
-                    ...picturesData.slice(itemIndex+1)
-                ]
+                picturesData: newPicturesData
             }
         case 'ADD_PHOTO':
             

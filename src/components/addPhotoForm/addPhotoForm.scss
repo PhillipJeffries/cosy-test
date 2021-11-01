@@ -10,8 +10,12 @@
         border-radius: 8px;
         padding: 5px;
         color: yellow;
-        background-color: blue;
+        background-color: rgb(26, 26, 139);
         outline: none;
         margin: 5px;
+        box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
+    }
+    & h4{
+        text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
     }
 }

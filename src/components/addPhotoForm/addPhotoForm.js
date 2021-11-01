@@ -37,7 +37,7 @@ const AddPhotoForm = () => {
             <div>
                 <input type="text" placeholder="enter url" value={url} onChange={changeUrl}/>
                 <input type="text" placeholder="enter comment" value={comment} onChange={changeComment}/>
-                <input type="submit" hidden/>
+                <input type="submit" value="enter"/>
             </div>
             <h4>press enter to add a new photo</h4>
         </form>
