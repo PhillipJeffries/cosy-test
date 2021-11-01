@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/cosy-test/static/css/main.4faeba84.chunk.css",
-    "main.js": "/cosy-test/static/js/main.40843de8.chunk.js",
-    "main.js.map": "/cosy-test/static/js/main.40843de8.chunk.js.map",
+    "main.css": "/cosy-test/static/css/main.73260ae0.chunk.css",
+    "main.js": "/cosy-test/static/js/main.8f645b7c.chunk.js",
+    "main.js.map": "/cosy-test/static/js/main.8f645b7c.chunk.js.map",
     "runtime-main.js": "/cosy-test/static/js/runtime-main.bacfedb2.js",
     "runtime-main.js.map": "/cosy-test/static/js/runtime-main.bacfedb2.js.map",
-    "static/js/2.a17bf36a.chunk.js": "/cosy-test/static/js/2.a17bf36a.chunk.js",
-    "static/js/2.a17bf36a.chunk.js.map": "/cosy-test/static/js/2.a17bf36a.chunk.js.map",
+    "static/js/2.a73b73b1.chunk.js": "/cosy-test/static/js/2.a73b73b1.chunk.js",
+    "static/js/2.a73b73b1.chunk.js.map": "/cosy-test/static/js/2.a73b73b1.chunk.js.map",
     "index.html": "/cosy-test/index.html",
-    "static/css/main.4faeba84.chunk.css.map": "/cosy-test/static/css/main.4faeba84.chunk.css.map",
-    "static/js/2.a17bf36a.chunk.js.LICENSE.txt": "/cosy-test/static/js/2.a17bf36a.chunk.js.LICENSE.txt"
+    "static/css/main.73260ae0.chunk.css.map": "/cosy-test/static/css/main.73260ae0.chunk.css.map",
+    "static/js/2.a73b73b1.chunk.js.LICENSE.txt": "/cosy-test/static/js/2.a73b73b1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bacfedb2.js",
-    "static/js/2.a17bf36a.chunk.js",
-    "static/css/main.4faeba84.chunk.css",
-    "static/js/main.40843de8.chunk.js"
+    "static/js/2.a73b73b1.chunk.js",
+    "static/css/main.73260ae0.chunk.css",
+    "static/js/main.8f645b7c.chunk.js"
   ]
 }
