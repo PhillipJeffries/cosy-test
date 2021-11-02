@@ -12,7 +12,6 @@ if (!getPicturesData().length) {
     setPicturesData(picturesData);
 }
 
-console.log(JSON.parse(''))
 
 const initialState = {
     picturesData: getPicturesData()
