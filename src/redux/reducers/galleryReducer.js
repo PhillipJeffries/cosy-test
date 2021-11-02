@@ -3,17 +3,17 @@ import {picturesData} from '../../picturesData';
 
 
 
-const setPicturesData = (data) => window.localStorage.setItem('picturesData', JSON.stringify(data))
-const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData') || "[]")
+const setPicturesData = (data) => window.localStorage.setItem('picturesData', JSON.stringify(data));
+const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData') || "[]");
 
 if(!getPicturesData().length) {
     setPicturesData(picturesData)
-}
+};
 
 
 const initialState = {
     picturesData: getPicturesData()
-}
+};
 
 export const galleryReducer = (state=initialState, action) => {
     switch (action.type) {
@@ -78,8 +78,4 @@ export const galleryReducer = (state=initialState, action) => {
         default:
             return state
         }
-    }
-
-
-            
-
+    };

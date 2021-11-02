@@ -37,11 +37,3 @@ const AddPhotoForm = () => {
 
 
 export default AddPhotoForm;
-
-
-
-
-
-
-
-

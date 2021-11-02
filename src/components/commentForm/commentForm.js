@@ -33,5 +33,3 @@ const CommentForm = ({data}) => {
 
 
 export default CommentForm;
-
-

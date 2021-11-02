@@ -6,6 +6,3 @@ export const rootReducer = combineReducers({
     galleryReducer,
     sliderReducer
 });
-
-
-
