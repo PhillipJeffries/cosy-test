@@ -1,15 +1,12 @@
-//import {picturesData} from '../../picturesData';
 
 const initialState = {
     hidden: true,
     index: 1
-}
+};
 
 export const sliderReducer = (state=initialState, action) => {
     switch (action.type) {
         case 'SHOW_SLIDER':
-            console.log('showslider')
-            
             return{
                 ...state,
                 hidden: action.hidden,
@@ -18,5 +15,7 @@ export const sliderReducer = (state=initialState, action) => {
         default:
             return state
     }
-}
+};
+           
+            
 
