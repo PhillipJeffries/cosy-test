@@ -1,8 +1,19 @@
 import {picturesData} from '../../picturesData';
 
 
+
+
+const setPicturesData = (data) => window.localStorage.setItem('picturesData', JSON.stringify(data))
+const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData'))
+
+if(!getPicturesData()) {
+    setPicturesData(picturesData)
+}
+
+console.log(getPicturesData());
+
 const initialState = {
-    picturesData
+    picturesData: getPicturesData()
 }
 
 export const galleryReducer = (state=initialState, action) => {
@@ -16,27 +27,39 @@ export const galleryReducer = (state=initialState, action) => {
                 ...picturesData.slice(0, itemIndex),
                 {url: picturesData[itemIndex].url, comment: comment, id: id},
                 ...picturesData.slice(itemIndex+1)
-            ]
+            ];
 
+            setPicturesData(newPicturesData);
+            console.log(newPicturesData);
             return{
                 ...state,
                 picturesData: newPicturesData
             }
         case 'ADD_PHOTO':
-            
-            
-            const newLocalState = [
-                {
-                    id: action.id,
-                    url: action.url,
-                    comment: action.comment
-                }
-            ]
-            return{
-                ...state,
-                picturesData: [...state.picturesData, ...newLocalState]
+            return(()=>{
+                const newPhotoData = [
+                    {
+                        id: action.id,
+                        url: action.url,
+                        comment: action.comment
+                    }
+                ];
 
-            }
+                const newPicturesData = [
+                    ...state.picturesData,
+                    ...newPhotoData
+                ];
+
+                setPicturesData(newPicturesData);
+    
+                return{
+                    ...state,
+                    picturesData: newPicturesData
+    
+                }
+            })();
+            
+            
         case 'DELETE_PHOTO':
             return(()=>{
                 console.log('deletePhoto')
@@ -49,6 +72,8 @@ export const galleryReducer = (state=initialState, action) => {
                     ...picturesData.slice(0, itemIndex),
                     ...picturesData.slice(itemIndex+1)
                 ];
+
+                setPicturesData(newPicturesData);
 
 
                 return{
