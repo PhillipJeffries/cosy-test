@@ -23,11 +23,8 @@ export const galleryReducer = (state=initialState, action) => {
             const {comment, id} = action;
             const {picturesData} = state;
             const itemIndex = picturesData.findIndex(res => res.id === id);
-            const newPicturesData = [
-                ...picturesData.slice(0, itemIndex),
-                {url: picturesData[itemIndex].url, comment: comment, id: id},
-                ...picturesData.slice(itemIndex+1)
-            ];
+            const newPicturesData  = [...picturesData] 
+            newPicturesData[itemIndex].comment = comment;
 
             setPicturesData(newPicturesData);
             console.log(newPicturesData);
@@ -75,17 +72,17 @@ export const galleryReducer = (state=initialState, action) => {
 
                 setPicturesData(newPicturesData);
 
-
                 return{
                     ...state,
                     picturesData: newPicturesData
                 }
-
             })();
 
-            
         default:
             return state
+        }
     }
-}
+
+
+            
 
