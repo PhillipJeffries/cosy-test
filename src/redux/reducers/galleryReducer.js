@@ -4,13 +4,12 @@ import {picturesData} from '../../picturesData';
 
 
 const setPicturesData = (data) => window.localStorage.setItem('picturesData', JSON.stringify(data))
-const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData'))
+const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData') || "[]")
 
-if(!getPicturesData()) {
+if(!getPicturesData().length) {
     setPicturesData(picturesData)
 }
 
-console.log(getPicturesData());
 
 const initialState = {
     picturesData: getPicturesData()
@@ -27,7 +26,6 @@ export const galleryReducer = (state=initialState, action) => {
             newPicturesData[itemIndex].comment = comment;
 
             setPicturesData(newPicturesData);
-            console.log(newPicturesData);
             return{
                 ...state,
                 picturesData: newPicturesData
@@ -59,7 +57,6 @@ export const galleryReducer = (state=initialState, action) => {
             
         case 'DELETE_PHOTO':
             return(()=>{
-                console.log('deletePhoto')
                 const id = action.id;
                
                 const {picturesData} = state;
