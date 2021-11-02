@@ -1,16 +1,18 @@
+
 import {picturesData} from '../../picturesData';
 
 
-
-
 const setPicturesData = (data) => window.localStorage.setItem('picturesData', JSON.stringify(data))
-const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData'))
 
-if(!getPicturesData()) {
-    setPicturesData(picturesData)
+
+const getPicturesData = () => JSON.parse(window.localStorage.getItem('picturesData') || "[]")
+
+
+if (!getPicturesData().length) {
+    setPicturesData(picturesData);
 }
 
-console.log(getPicturesData());
+console.log(JSON.parse(''))
 
 const initialState = {
     picturesData: getPicturesData()
